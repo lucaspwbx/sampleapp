@@ -3,6 +3,7 @@ SampleApp::Application.routes.draw do
   get "static_pages/help" => 'static_pages#help', as: :help
   get 'static_pages/about' => 'static_pages#about', as: :about
   get 'static_pages/contact' => 'static_pages#contact', as: :contact
+  resources :users
   root 'static_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
