@@ -5,6 +5,7 @@ SampleApp::Application.routes.draw do
   get 'static_pages/contact' => 'static_pages#contact', as: :contact
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :microposts, only: [:create, :destroy]
   get '/signin' => 'sessions#new', as: :signin
   delete '/signout' => 'sessions#destroy', as: :signout
   root 'static_pages#home'
